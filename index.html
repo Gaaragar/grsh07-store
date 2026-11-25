@@ -8,105 +8,133 @@
 <title>GRSH07 | Official Store</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#171717}
-header{height:65px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:5}
-.logo{font-size:24px;font-weight:900;letter-spacing:2px}
-header a{color:#111;text-decoration:none;font-size:14px}
-.hero{background:#151515;color:white;padding:55px 7%;text-align:center}
-.hero p{color:#bbb;font-size:14px}
-.hero h1{font-size:38px;margin:12px 0}
-.shop{display:inline-block;background:white;color:#111;padding:13px 25px;text-decoration:none;font-weight:bold;margin-top:15px;border-radius:3px}
-main{max-width:1100px;margin:auto;padding:35px 18px}
-.section-title{text-align:center;margin-bottom:25px}
-.section-title h2{font-size:25px}
+body{margin:0;font-family:Arial,sans-serif;background:#faf9f6;color:#171717}
+header{height:68px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:900;letter-spacing:2px}
+header a{color:#111;text-decoration:none;font-size:14px;font-weight:bold}
+.hero{background:#151515;color:white;padding:65px 7%;text-align:center}
+.hero .tag{font-size:11px;letter-spacing:4px;color:#c8b99d}
+.hero h1{font-size:38px;line-height:1.15;margin:20px 0 12px}
+.hero p{color:#ccc;font-size:14px;line-height:1.7}
+.shop{display:inline-block;background:#e7dcc7;color:#171717;padding:15px 28px;text-decoration:none;font-weight:bold;font-size:12px;letter-spacing:1px;margin-top:20px}
+.benefits{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;background:#fff;padding:18px 10px;border-bottom:1px solid #eee}
+.benefits span{font-size:11px;letter-spacing:.5px}
+main{max-width:1150px;margin:auto;padding:42px 18px}
+.section-title{text-align:center;margin-bottom:28px}
+.section-title small{letter-spacing:3px;color:#9b8768;font-size:10px}
+.section-title h2{font-size:25px;margin:10px 0}
+.section-title p{font-size:13px;color:#777}
 .tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
-input,select{padding:13px;border:1px solid #ddd;border-radius:5px;font-size:14px;background:white}
-input{flex:1;min-width:160px}
-select{min-width:120px}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.product{border:1px solid #eee;border-radius:7px;overflow:hidden}
-.product img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#f3f3f3}
+input,select{padding:14px;border:1px solid #ddd;border-radius:3px;font-size:14px;background:white}
+input{flex:1;min-width:150px}
+select{min-width:125px}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.product{background:white;border:1px solid #eee}
+.product img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee;display:block}
 .product-info{padding:12px}
-.product h3{font-size:15px;margin:3px 0 8px}
-.price{font-weight:bold;margin-bottom:12px}
-.product button,.checkout,.add{width:100%;padding:12px;background:#171717;color:white;border:0;border-radius:4px;font-weight:bold;cursor:pointer}
-.cart{margin-top:40px;padding:22px;background:#f6f6f6;border-radius:8px}
-.cart h2{margin-top:0}
-.cart-item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #ddd;font-size:14px}
-.cart-item button{border:0;background:none;color:#b22;cursor:pointer}
-.total{font-weight:bold;text-align:right;padding:15px 0}
-footer{background:#151515;color:white;text-align:center;padding:28px 15px;font-size:13px}
-footer p{color:#bbb}
+.product h3{font-size:14px;margin:3px 0 9px}
+.price{font-weight:bold;font-size:15px;margin-bottom:13px}
+.product button,.checkout,.add{width:100%;padding:13px;background:#171717;color:white;border:0;font-weight:bold;font-size:11px;letter-spacing:.5px;cursor:pointer}
+.cart{margin-top:45px;padding:22px;background:#fff;border:1px solid #eee}
+.cart h2{font-size:19px}
+.cart-item{display:flex;justify-content:space-between;gap:8px;padding:13px 0;border-bottom:1px solid #eee;font-size:13px}
+.cart-item button{border:0;background:none;color:#a33;padding:5px;cursor:pointer}
+.qty button{background:#eee;color:#111;border:0;padding:5px 9px;margin:0 3px}
+.total{font-weight:bold;text-align:right;padding:18px 0}
+.checkout{background:#176b43;padding:16px}
+.empty{text-align:center;color:#888;padding:18px}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:20;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:white;padding:24px;width:100%;max-width:380px}
+.modal-box h3{margin-top:0}
+.modal-box select{width:100%;margin:12px 0}
+.modal-actions{display:flex;gap:10px}
+.modal-actions button{flex:1;padding:13px;border:0;cursor:pointer;font-weight:bold}
+.cancel{background:#eee}
+footer{background:#151515;color:white;text-align:center;padding:35px 15px;margin-top:45px}
+footer p{color:#aaa;font-size:12px}
 @media(min-width:700px){
- .hero{padding:85px 10%}
- .hero h1{font-size:55px}
- .products{grid-template-columns:repeat(4,1fr);gap:20px}
+.hero{padding:100px 10%}
+.hero h1{font-size:58px}
+.products{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+main{padding-top:55px}
 }
 </style>
 </head>
 <body>
-
 <header>
  <div class="logo">GRSH07</div>
- <a href="#cart">🛒 Keranjang (<span id="count">0</span>)</a>
+ <a href="#cart">KERANJANG (<span id="count">0</span>)</a>
 </header>
 
 <section class="hero">
- <p>OFFICIAL ONLINE STORE</p>
- <h1>STEP INTO COMFORT.</h1>
- <p>Temukan sandal pilihan untuk gaya sehari-hari.</p>
- <a class="shop" href="#products">BELANJA SEKARANG</a>
+ <div class="tag">GRSH07 OFFICIAL STORE</div>
+ <h1>STEP INTO<br>COMFORT.</h1>
+ <p>Temukan sandal pilihan untuk melengkapi gaya sehari-hari.</p>
+ <a class="shop" href="#products">JELAJAHI KOLEKSI</a>
 </section>
 
+<div class="benefits">
+ <span>✦ PILIHAN MODEL</span>
+ <span>✦ BELANJA MUDAH</span>
+ <span>✦ PESAN VIA WHATSAPP</span>
+</div>
+
 <main>
- <section id="products">
-  <div class="section-title">
-   <h2>KOLEKSI SANDAL</h2>
-   <p>Temukan model favoritmu.</p>
-  </div>
+<section id="products">
+ <div class="section-title">
+  <small>OUR COLLECTION</small>
+  <h2>KOLEKSI SANDAL</h2>
+  <p>Temukan model favoritmu.</p>
+ </div>
+ <div class="tools">
+  <input id="search" placeholder="Cari nama sandal..." oninput="render()">
+  <select id="size" onchange="render()">
+   <option value="">Semua ukuran</option>
+   <option value="38">38</option><option value="39">39</option>
+   <option value="40">40</option><option value="41">41</option>
+   <option value="42">42</option><option value="43">43</option>
+  </select>
+ </div>
+ <div class="products" id="productsList"></div>
+</section>
 
-  <div class="tools">
-   <input id="search" placeholder="Cari nama sandal..." oninput="render()">
-   <select id="size" onchange="render()">
-    <option value="">Semua ukuran</option>
-    <option>38</option><option>39</option>
-    <option>40</option><option>41</option>
-    <option>42</option><option>43</option>
-   </select>
-  </div>
-  <div class="products" id="productsList"></div>
- </section>
-
- <section class="cart" id="cart">
-  <h2>KERANJANG BELANJA</h2>
-  <div id="cartItems">Keranjang masih kosong.</div>
-  <div class="total" id="total">Total: Rp0</div>
-  <button class="checkout" onclick="checkout()">PESAN VIA WHATSAPP</button>
- </section>
+<section class="cart" id="cart">
+ <h2>KERANJANG BELANJA</h2>
+ <div id="cartItems" class="empty">Keranjang masih kosong.</div>
+ <div class="total" id="total">Total: Rp0</div>
+ <button class="checkout" onclick="checkout()">PESAN VIA WHATSAPP</button>
+</section>
 </main>
+
+<div class="modal" id="modal">
+ <div class="modal-box">
+  <h3 id="modalName">Pilih ukuran</h3>
+  <p>Silakan pilih ukuran sandal.</p>
+  <select id="modalSize"></select>
+  <div class="modal-actions">
+   <button class="cancel" onclick="closeModal()">BATAL</button>
+   <button class="add" onclick="confirmAdd()">TAMBAHKAN</button>
+  </div>
+ </div>
+</div>
 
 <footer>
  <h2>GRSH07</h2>
- <p>Terima kasih sudah berbelanja bersama kami.</p>
- <p>Official Online Store</p>
+ <p>OFFICIAL ONLINE STORE</p>
+ <p>Terima kasih telah berbelanja bersama kami.</p>
 </footer>
 
 <script>
-// GANTI NOMOR INI DENGAN NOMOR WHATSAPP TOKO
-const WA_NUMBER = "6281617393106";
+const WA_NUMBER="6281617393106";
 
-// GANTI DATA CONTOH DENGAN PRODUK ASLI TOKO
-// Harga ditulis tanpa titik atau simbol Rp.
-const products = [
- {id:1,name:"Contoh Sandal 01",price:25000,
-  sizes:[38,39,40,41,42,43],
-  image:"https://placehold.co/600x600/f2f2f2/222?text=GRSH07+01"},
- {id:2,name:"Contoh Sandal 02",price:27900,
-  sizes:[38,39,40,41,42,43],
-  image:"https://placehold.co/600x600/f2f2f2/222?text=GRSH07+02"}
+// Produk contoh. Ganti dengan foto dan data produk asli.
+const products=[
+{id:1,name:"Contoh Sandal 01",price:25000,sizes:[38,39,40,41,42,43],image:"https://placehold.co/600x600/f2f2f2/222?text=GRSH07+01"},
+{id:2,name:"Contoh Sandal 02",price:27900,sizes:[38,39,40,41,42,43],image:"https://placehold.co/600x600/f2f2f2/222?text=GRSH07+02"}
 ];
 
 let cart=[];
+let selectedProduct=null;
 
 function rupiah(n){
  return "Rp"+n.toLocaleString("id-ID");
@@ -115,33 +143,47 @@ function rupiah(n){
 function render(){
  const q=document.getElementById("search").value.toLowerCase();
  const s=document.getElementById("size").value;
- const list=document.getElementById("productsList");
  const filtered=products.filter(p=>
   p.name.toLowerCase().includes(q)&&
   (!s||p.sizes.includes(Number(s)))
  );
-
- list.innerHTML=filtered.length?filtered.map(p=>`
+ document.getElementById("productsList").innerHTML=
+ filtered.length?filtered.map(p=>`
  <article class="product">
   <img src="${p.image}" alt="${p.name}">
   <div class="product-info">
    <h3>${p.name}</h3>
    <div class="price">${rupiah(p.price)}</div>
-   <button onclick="add(${p.id})">TAMBAH KE KERANJANG</button>
+   <button onclick="openModal(${p.id})">PILIH UKURAN</button>
   </div>
- </article>`).join(""):"<p>Produk tidak ditemukan.</p>";
+ </article>`).join(""):'<p>Produk tidak ditemukan.</p>';
 }
 
-function add(id){
- const p=products.find(x=>x.id===id);
- const size=prompt("Masukkan ukuran sandal: "+p.sizes.join(", "));
- if(size===null)return;
- if(!p.sizes.includes(Number(size))){
-  alert("Ukuran tidak tersedia.");return;
- }
- const old=cart.find(x=>x.id===id&&x.size===Number(size));
+function openModal(id){
+ selectedProduct=products.find(p=>p.id===id);
+ document.getElementById("modalName").textContent=selectedProduct.name;
+ document.getElementById("modalSize").innerHTML=
+ selectedProduct.sizes.map(s=>`<option value="${s}">${s}</option>`).join("");
+ document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+ document.getElementById("modal").style.display="none";
+}
+
+function confirmAdd(){
+ if(!selectedProduct)return;
+ const size=Number(document.getElementById("modalSize").value);
+ const old=cart.find(x=>x.id===selectedProduct.id&&x.size===size);
  if(old)old.qty++;
- else cart.push({...p,size:Number(size),qty:1});
+ else cart.push({...selectedProduct,size,qty:1});
+ closeModal();
+ updateCart();
+}
+
+function changeQty(i,amount){
+ cart[i].qty+=amount;
+ if(cart[i].qty<=0)cart.splice(i,1);
  updateCart();
 }
 
@@ -153,34 +195,39 @@ function removeItem(i){
 function updateCart(){
  document.getElementById("count").textContent=
  cart.reduce((a,b)=>a+b.qty,0);
- document.getElementById("cartItems").innerHTML=
- cart.length?cart.map((x,i)=>`
+ document.getElementById("cartItems").innerHTML=cart.length?
+ cart.map((x,i)=>`
  <div class="cart-item">
- <span>${x.name} / Ukuran ${x.size} × ${x.qty}</span>
- <span>${rupiah(x.price*x.qty)}
- <button onclick="removeItem(${i})">Hapus</button></span>
- </div>`).join(""):"Keranjang masih kosong.";
+  <div>${x.name}<br>Ukuran ${x.size}<br>${rupiah(x.price)} / pcs</div>
+  <div>
+   <div class="qty">
+    <button onclick="changeQty(${i},-1)">−</button>
+    ${x.qty}
+    <button onclick="changeQty(${i},1)">+</button>
+   </div>
+   <button onclick="removeItem(${i})">Hapus</button>
+  </div>
+ </div>`).join(""):'<div class="empty">Keranjang masih kosong.</div>';
  const total=cart.reduce((a,b)=>a+b.price*b.qty,0);
  document.getElementById("total").textContent="Total: "+rupiah(total);
 }
 
 function checkout(){
- if(!cart.length){alert("Keranjang masih kosong.");return;}
- if(WA_NUMBER.includes("x")){
-  alert("Nomor WhatsApp toko belum diatur.");return;
+ if(!cart.length){
+  alert("Keranjang masih kosong.");
+  return;
  }
- let msg="Halo GRSH07, saya ingin memesan:%0A%0A";
+ let msg="Halo GRSH07, saya ingin memesan:\n\n";
  cart.forEach(x=>{
-  msg+=encodeURIComponent(x.name+" | Ukuran "+x.size+
-  " | Jumlah "+x.qty+" | "+rupiah(x.price*x.qty))+"%0A";
+  msg+=x.name+" | Ukuran "+x.size+" | Jumlah "+x.qty+
+  " | "+rupiah(x.price*x.qty)+"\n";
  });
  const total=cart.reduce((a,b)=>a+b.price*b.qty,0);
- msg+="%0A"+encodeURIComponent("Total: "+rupiah(total));
- window.open("https://wa.me/"+WA_NUMBER+"?text="+msg,"_blank");
+ msg+="\nTotal: "+rupiah(total);
+ window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg),"_blank");
 }
 
 render();
 </script>
 </body>
-  </html>
-  
+</html>
